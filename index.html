@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Booking confirmation for Lucia's stay at Maison Soleil, Cassis.">
+  <meta name="theme-color" content="#faf6ef">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="./styles.css">
+
+  <title>Maison Soleil | Booking confirmed</title>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- Sidebar starts -->
+
+    <aside class="sidebar">
+      <div class="sidebar__top">
+        <a class="brand" href="#main">
+          <span class="brand__mark" aria-hidden="true">
+            <svg class="brand__logo" viewBox="0 0 64 64" width="42" height="42" focusable="false">
+              <defs>
+                <clipPath id="crown-clip">
+                  <path d="M17.5 19.8C17.5 12.6 23.9 7 32 7s14.5 5.6 14.5 12.8Z"/>
+                </clipPath>
+              </defs>
+
+              <!-- Crossbones -->
+              <g fill="#f7efdf" stroke="#2b2620" stroke-width="2.2">
+                <rect x="8" y="28.5" width="48" height="7" rx="3.5" transform="rotate(45 32 32)"/>
+                <rect x="8" y="28.5" width="48" height="7" rx="3.5" transform="rotate(-45 32 32)"/>
+              </g>
+
+              <!-- Skull and jaw -->
+              <path d="M32 20a14 14 0 0 1 14 14c0 4.4-2 8.2-5.2 10.7v6a3.6 3.6 0 0 1-3.6 3.6H26.8a3.6 3.6 0 0 1-3.6-3.6v-6A13.9 13.9 0 0 1 18 34a14 14 0 0 1 14-14Z"
+                    fill="#f7efdf" stroke="#2b2620" stroke-width="2.4" stroke-linejoin="round"/>
+
+              <!-- Eyes, nose and teeth -->
+              <g fill="#2b2620">
+                <ellipse cx="26.4" cy="33.4" rx="4.3" ry="4.9"/>
+                <ellipse cx="37.6" cy="33.4" rx="4.3" ry="4.9"/>
+                <path d="M32 37.6l3 5.2a.9.9 0 0 1-.8 1.4h-4.4a.9.9 0 0 1-.8-1.4Z"/>
+                <rect x="27.9" y="46.4" width="1.8" height="6" rx=".9"/>
+                <rect x="31.1" y="46.4" width="1.8" height="6" rx=".9"/>
+                <rect x="34.3" y="46.4" width="1.8" height="6" rx=".9"/>
+              </g>
+
+              <!-- Straw hat -->
+              <path d="M17.5 19.8C17.5 12.6 23.9 7 32 7s14.5 5.6 14.5 12.8Z"
+                    fill="#f2c14e" stroke="#2b2620" stroke-width="2.4" stroke-linejoin="round"/>
+              <g clip-path="url(#crown-clip)">
+                <g stroke="#c9962f" stroke-width="1.2" stroke-linecap="round">
+                  <path d="M24 17 22.6 9.5M32 16.5V8.6M40 17l1.4-7.5"/>
+                </g>
+                <rect x="16" y="14.6" width="32" height="5.5" fill="#b7411b"/>
+              </g>
+              <ellipse cx="32" cy="19.9" rx="22" ry="5.2" fill="#f5d98a" stroke="#2b2620" stroke-width="2.4"/>
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name">Maison Soleil</span>
+            <span class="brand__tag">Maison d'hôtes · Cassis</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="guest-menu" aria-label="Open navigation menu" data-menu-toggle>
+          <img class="menu-toggle__open" src="./assets/images/icon-menu.svg" alt="" width="20" height="20">
+          <img class="menu-toggle__close" src="./assets/images/icon-close.svg" alt="" width="20" height="20">
+        </button>
+      </div>
+
+      <div class="sidebar__panel" id="guest-menu">
+
+        <!-- Guest navigation -->
+        <nav class="nav" aria-label="Guest">
+          <ul class="nav__list">
+            <li>
+              <a class="nav__link is-active" href="#stay" aria-current="true">
+                Your stay
+                <span class="nav__badge" aria-hidden="true">1</span>
+                <span class="sr-only">, 1 notification</span>
+              </a>
+            </li>
+            <li><a class="nav__link" href="#house">The house</a></li>
+            <li><a class="nav__link" href="#arrival">Around town</a></li>
+            <li><a class="nav__link" href="#breakfast">Breakfast</a></li>
+            <li><a class="nav__link" href="#contact">Messages</a></li>
+          </ul>
+        </nav>
+
+        <!-- Local weather -->
+        <section class="weather" aria-labelledby="weather-title">
+          <h2 class="weather__title" id="weather-title">Today in Cassis</h2>
+          <div class="weather__row">
+            <img class="weather__icon" src="./assets/images/icon-sun.svg" alt="" width="49" height="49">
+            <p class="weather__temp"><data value="27">27°</data></p>
+          </div>
+          <p class="weather__desc">Sunny · light breeze</p>
+        </section>
+
+        <footer class="sidebar__footer">
+          <p class="sidebar__est">Est. 1987</p>
+          <address class="contact" id="contact">
+            <p class="contact__row">
+              <img src="./assets/images/icon-pin.svg" alt="" width="16" height="16">
+              <span>Maison Soleil · 12 Rue des Oliviers · Cassis</span>
+            </p>
+            <a class="contact__row" href="tel:+33442011111">
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M5.2 2.7h2.1l1 2.9-1.4 1a10 10 0 0 0 5.5 5.5l1-1.4 2.9 1v2.1a1.5 1.5 0 0 1-1.6 1.5C8.8 15.2 4.8 11.2 3.7 4.3a1.5 1.5 0 0 1 1.5-1.6Z"/>
+              </svg>
+              <span>+33 4 42 01 11 11</span>
+            </a>
+            <a class="contact__row" href="mailto:johndue@example.com">
+              <img src="./assets/images/icon-mail.svg" alt="" width="16" height="16">
+              <span>johndue@example.com</span>
+            </a>
+          </address>
+          <p class="sidebar__copy">© 2026 Maison Soleil</p>
+        </footer>
+
+      </div>
+    </aside>
+
+    <!-- Sidebar ends -->
+
+    <!-- Main content starts -->
+
+    <main class="main" id="main" tabindex="-1">
+      <div class="main__inner">
+
+        <header class="page-header">
+          <div class="page-header__intro">
+            <p class="eyebrow">
+              <img src="./assets/images/icon-sparkle.svg" alt="" width="8" height="8">
+              Booking · Confirmed
+            </p>
+            <h1 class="page-title">Bienvenue, <em>Lucia</em>.</h1>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn--primary" type="button" data-print>
+              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 7V3h8v4"/>
+                <path d="M6 14H4.5A1.5 1.5 0 0 1 3 12.5v-4A1.5 1.5 0 0 1 4.5 7h11A1.5 1.5 0 0 1 17 8.5v4a1.5 1.5 0 0 1-1.5 1.5H14"/>
+                <rect x="6" y="11" width="8" height="6" rx="1"/>
+              </svg>
+              Print receipt
+            </button>
+            <button class="btn btn--ghost" type="button" data-calendar>
+              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4.5" width="14" height="13" rx="2"/>
+                <path d="M3 8.5h14M7 2.5v4M13 2.5v4"/>
+              </svg>
+              Add to calendar
+            </button>
+          </div>
+        </header>
+
+        <!-- Booking cards start -->
+
+        <div class="stack" id="stay">
+
+          <!-- Receipt card -->
+          <article class="card receipt" aria-labelledby="receipt-title">
+            <header class="receipt__head">
+              <h2 class="receipt__title" id="receipt-title">Receipt</h2>
+              <p class="receipt__ref">
+                <span>№ MS-2026</span>
+                <span>0421-AH</span>
+              </p>
+            </header>
+
+            <p class="receipt__label">Your stay</p>
+
+            <dl class="receipt__list">
+              <div class="receipt__row">
+                <dt>Check in</dt>
+                <dd>
+                  <time datetime="2026-04-25">25 Apr</time>
+                  <span>Saturday · 15:00</span>
+                </dd>
+              </div>
+              <div class="receipt__row">
+                <dt>Check out</dt>
+                <dd>
+                  <time datetime="2026-04-29">29 Apr</time>
+                  <span>Wednesday · 11:00</span>
+                </dd>
+              </div>
+              <div class="receipt__row receipt__row--item">
+                <dt>Room · La Garrigue · 4 nights</dt>
+                <dd>€ 620.00</dd>
+              </div>
+              <div class="receipt__row receipt__row--item">
+                <dt>Breakfast · 2 guests</dt>
+                <dd>€ 96.00</dd>
+              </div>
+              <div class="receipt__row receipt__row--item">
+                <dt>Tourist tax</dt>
+                <dd>€ 14.40</dd>
+              </div>
+              <div class="receipt__row receipt__row--total">
+                <dt>Total paid</dt>
+                <dd>€ 730.40</dd>
+              </div>
+            </dl>
+
+            <footer class="receipt__foot">
+              <p class="receipt__paid">Paid · Wise · GBP</p>
+              <img class="receipt__barcode" src="./assets/images/icon-barcode.svg" alt="Barcode for booking number 0421-AH" width="93" height="28">
+            </footer>
+          </article>
+
+          <!-- Note from host card -->
+          <article class="card note" id="house" aria-labelledby="note-title">
+            <p class="note__eyebrow">Welcome</p>
+            <h2 class="note__title" id="note-title">A note from your host, <em>Margaux</em>.</h2>
+            <p class="note__body">We're so glad you're coming. The shutters will be open, the lemonade cold, and the cat — Poivre — pretending not to notice you.</p>
+            <p class="note__sign">Room <strong>La Garrigue</strong></p>
+          </article>
+
+        </div>
+
+        <!-- Booking cards end -->
+
+        <!-- Guest info row starts -->
+
+        <section class="details" aria-label="Guest information">
+
+          <!-- Arrival -->
+          <article class="info" id="arrival" aria-labelledby="arrival-title">
+            <header class="info__head">
+              <span class="info__icon" aria-hidden="true">
+                <img src="./assets/images/icon-key.svg" alt="" width="24" height="25">
+              </span>
+              <span class="info__num" aria-hidden="true">01</span>
+            </header>
+            <h3 class="info__title" id="arrival-title">Arrival</h3>
+            <p class="info__lead">Check-in from 15:00<br><time datetime="2026-04-25">Sat, 25 April</time></p>
+            <p class="info__text">Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
+          </article>
+
+          <!-- Wifi -->
+          <article class="info" id="wifi" aria-labelledby="wifi-title">
+            <header class="info__head">
+              <span class="info__icon" aria-hidden="true">
+                <img src="./assets/images/icon-wifi.svg" alt="" width="24" height="24">
+              </span>
+              <span class="info__num" aria-hidden="true">02</span>
+            </header>
+            <h3 class="info__title" id="wifi-title">Wifi</h3>
+            <p class="info__lead">Le Soleil · Guest</p>
+            <p class="info__meta">Password below</p>
+            <dl class="wifi">
+              <div class="wifi__row">
+                <dt>Network</dt>
+                <dd>Le Soleil · Guest</dd>
+              </div>
+              <div class="wifi__row">
+                <dt>Password</dt>
+                <dd><code id="wifi-password">soleil-2026</code></dd>
+              </div>
+            </dl>
+            <button class="btn btn--copy" type="button" data-copy="wifi-password" aria-describedby="copy-status">
+              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2.5" width="6" height="3" rx="1"/>
+                <path d="M5.5 4.5h-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-1"/>
+              </svg>
+              <span data-copy-label>Copy</span>
+            </button>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+          </article>
+
+          <!-- Breakfast -->
+          <article class="info" id="breakfast" aria-labelledby="breakfast-title">
+            <header class="info__head">
+              <span class="info__icon" aria-hidden="true">
+                <img src="./assets/images/icon-breakfast.svg" alt="" width="24" height="24">
+              </span>
+              <span class="info__num" aria-hidden="true">03</span>
+            </header>
+            <h3 class="info__title" id="breakfast-title">Breakfast</h3>
+            <p class="info__lead">Served 8 – 10:30<br>On the terrace</p>
+            <p class="info__text">Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.</p>
+          </article>
+
+        </section>
+
+        <!-- Guest info row ends -->
+
+      </div>
+    </main>
+
+    <!-- Main content ends -->
+
+  </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">John Doe</a>.
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
